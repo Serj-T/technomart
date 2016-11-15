@@ -1,0 +1,32 @@
+.filter-radio {
+  .list-reset();
+  border: none;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+.filter-radio legend {
+  text-transform: uppercase;
+}
+.filter-radio__list {
+  .list-reset();
+}
+.filter-radio input {
+  display: none;
+}
+.filter-radio label {
+  .filters-label();
+}
+input[type="radio"] + label::before {
+  content: "\25cb";
+  .input-style();
+}
+input[type="radio"]:checked + label::before {
+  content: "\25cf";
+  .input-style();
+}
+input[type="radio"] + label {
+  .filters-color();
+}
+input[type="radio"]:disabled + label {
+  .filters-color-disabled();
+}

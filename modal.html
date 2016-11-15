@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Магазин Nerd's</title>
+  <meta name="description" content="Магазин готовых макетов Nerds">
+  <meta name="keywords" content="дизайн-студия, макеты, лендингы, сайты, мобильные приложения">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="main-header__wrap">
+      <div class="main-header__logo">
+        <a href="index.html"><img src="img/logo.png" alt="Nerds" width="139" height="56"></a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="">Студия</a></li>
+          <li class="main-nav__item">
+            <a href="">Клиенты</a></li>
+          <li class="main-nav__item  main-nav__item--active">
+            <a href="#">Магазин</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="">Контакты</a>
+          </li>
+        </ul>
+        <div class="user-block">
+          <ul class="user-block__list">
+            <li class="user-block__item">
+              <a href="#"><i class="icon-basket"></i>Корзина</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title">
+    <h1>Напишите нам!</h1>
+  </div>
+
+  <div class="modal  modal--page">
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <div class="modal__user-block">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required autofocus>
+      </div>
+      <div class="modal__user-block">
+        <label for="email">Ваше e-mail:</label>
+        <input type="text" id="email" name="email" placeholder="Для отправки ответа" required>
+      </div>
+      <div class="modal__user-block  test">
+        <label for="textarea">Текст письма:</label>
+        <textarea placeholder="В свободной форме" id="textarea" name="textarea" rows="7" required></textarea>
+      </div>
+      <input type="submit" class="btn  btn--modal">
+    </form>
+  </div>
+
+  <footer class="main-footer">
+    <div class="main-footer__wrap">
+      <div class="main-footer__social">
+        <a class="btn  btn--social" href="#"><i class="icon-vk"></i></a>
+        <a class="btn  btn--social" href="#"><i class="icon-facebook"></i></a>
+        <a class="btn  btn--social" href="#"><i class="icon-instagramm"></i></a>
+      </div>
+      <div class="footer__text">
+        <span>Давайте дружить, это выгодно!</span>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
