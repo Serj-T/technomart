@@ -1,19 +1,30 @@
 .promo-nav {
-  width: 940px;
-  padding: 0 10px;
-  margin: 0 auto;
+  .wrap();
+  margin-bottom: 53px;
 }
 .promo-nav__wrap {
   display: flex;
   justify-content: space-between;
+  align-content: space-between;
   flex-wrap: wrap;
+  min-height: 409px;
+}
+.promo-nav__group {
+  display: flex;
+  justify-content: space-between;
+
+  &:first-child {
+    width: 100%;
+    flex-direction: row;
+  }
+  &:last-child {
+    flex-direction: column;
+  }
 }
 .promo-nav__item {
-  display: block;
-  padding: 21px 22px;
   width: 256px;
-  margin-bottom: 20px;
   height: 81px;
+  padding: 21px 22px;
 
   &--materials {
     background: url("../../img/icon-material.png") no-repeat 212px 31px,
@@ -47,49 +58,30 @@
 }
 .promo-nav__slider {
   position: relative;
-  width: 620px;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 620px;
   height: 266px;
-  background-color: lightgrey;
-}
-.promo-nav__item .btn--promo-nav {
-  width: 95px;
-  padding: 10px 21px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 18px;
-  border-radius: 3px;
-  text-align: center;
-  overflow: hidden;
-  color: #ffffff;
-  background-color: rgba(0,0,0,.1);
 }
 .promo-nav__slider input[type="radio"] {
   display: none;
 }
 .promo-nav__slider label {
-  position: absolute;
-  display: block;
-  padding-top: 112px;
-  padding-bottom: 110px;
   font-size: 45px;
   cursor: pointer;
+  padding-top: 110px;
   color: #ffffff;
   z-index: 90;
-
-  &[for="perf"] {
-    left: 4px;
-  }
-  &[for="drill"] {
-    right: 0;
-  }
+}
+.promo-nav__slider .icon-left {
+  margin-left: 4px;
 }
 .promo-nav__slide {
   display: none;
   position: absolute;
-  width: 447px;
-  padding: 22px 23px;
-  padding-right: 150px;
+  width: 574px;
   height: 222px;
+  padding: 22px 23px;
 
   &--perf {
     background: url("../../img/slider1.jpg") no-repeat;
@@ -98,33 +90,30 @@
     background: url("../../img/slider2.jpg") no-repeat;
   }
 }
-
-
 .promo-nav__slide h3 {
-  width: 450px;
-  height: 40px;
-  margin: 7px 0;
+  width: 574px;
+  max-height: 38px;
+  margin: 0;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
+  line-height: 38px;
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
+  overflow: hidden;
 }
 .promo-nav__slide span {
-  display: block;
-  height: 40px;
-  width: 450px;
+  width: 574px;
+  max-height: 46px;
+  margin-bottom: auto;
   font-size: 18px;
-  color: #ffffff
+  color: #ffffff;
+  overflow: hidden;
 }
 input[id="perf"]:checked ~ .promo-nav__slide--perf,
 input[id="drill"]:checked ~ .promo-nav__slide--drill {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: flex-start;
   flex-wrap: wrap;
-}
-.btn--promo-slider {
-  width: 150px;
-  align-self: flex-end;
 }

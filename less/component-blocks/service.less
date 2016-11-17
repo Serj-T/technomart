@@ -1,0 +1,106 @@
+.service {
+  margin-top: 65px;
+  margin-bottom: 51px;
+  background-color: #f2f6f8;
+}
+.service__wrap {
+  .wrap();
+  display: flex;
+  flex-direction: column;
+  padding-top: 42px;
+}
+.service__title {
+  width: 400px;
+  margin-bottom: 16px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.service__text {
+  width: 400px;
+}
+.service__slider {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 58px;
+}
+.service__slider input[type="radio"] {
+  display: none;
+}
+.service__slide {
+  display: none;
+  height: 283px;
+  overflow: hidden;
+
+  &--1 {
+    background: url("../../img/service-slider.png") no-repeat 100%;
+  }
+  &--2 {
+    background: url("../../img/service-slider1.png") no-repeat 100%;
+  }
+  &--3 {
+    background: url("../../img/service-slider2.png") no-repeat 100%;
+  }
+}
+#delivery:checked ~ .service__slide--1,
+#guarantee:checked ~ .service__slide--2,
+#credit:checked ~ .service__slide--3 {
+  display: block;
+}
+.service__slider-control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+
+  &::after {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    content: url("../../img/slider-service-separate.png");
+    z-index: 10;
+  }
+}
+.service__slide {
+  width: 620px;
+  overflow: hidden;
+}
+.service__slide h3 {
+  width: 380px;
+  margin-top: -3px;
+  margin-bottom: 25px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  color: #32425c;
+  text-transform: uppercase;
+}
+.service__slide p {
+  width: 380px;
+  margin-top: 20px;
+}
+.service__slide--1 p {
+  width: 380px;
+}
+.service__slider-control label {
+  padding-left: 22px;
+  padding-top: 11px;
+  padding-bottom: 18px;
+  min-height: 30px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  color: #ffffff;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  background-color: #32425c;
+  cursor: pointer;
+}
+#delivery:checked ~ .service__slider-control label[for="delivery"],
+#guarantee:checked ~ .service__slider-control label[for="guarantee"],
+#credit:checked ~ .service__slider-control label[for="credit"] {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  color: #32425c;
+  background-color: #ffffff;
+}
