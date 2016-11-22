@@ -5,10 +5,27 @@
   align-items: center;
   width: 220px;
   height: 318px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
   padding: 20px 0;
   border: 1px solid #e5e5e5;
   text-align: center;
-  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0px 10px 50px 1px fade(#293449, 50%);
+
+    & img {
+      display: none;
+    }
+    & .item-card__modal {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 135px;
+      height: 84px;
+      margin-top: 24px;
+    }
+  }
 }
 .item-card--new {
   &::before {
@@ -94,20 +111,6 @@
     }
   }
 }
-.item-card:hover {
-  box-shadow: 5px 5px 5px black;
-}
 .item-card__modal {
-  display: none;
-}
-.item-card:hover .item-card__modal {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 135px;
-  height: 84px;
-  margin-top: 24px;
-}
-.item-card:hover img {
   display: none;
 }

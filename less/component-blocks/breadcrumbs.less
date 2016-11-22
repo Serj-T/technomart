@@ -1,0 +1,46 @@
+.breadcrumbs {
+  .wrap();
+}
+.breadcrumbs__list {
+  .list-reset();
+  display: flex;
+  align-items: center;
+  margin-left: -4px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.breadcrumbs__item {
+  position: relative;
+  padding-right: 18px;
+  padding-left: 18px;
+
+  & a {
+    position: relative;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &::after {
+    content: "\3e";
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    font-family: "symbols-technomart";
+    font-size: 14px;
+    color: #c1c6ce;
+  }
+  &:first-child  {
+    padding-left: 0;
+    padding-right: 12px;
+  }
+  &:last-child::after {
+    display: none;
+  }
+  &:first-child a {
+    font-family: "symbols-technomart";
+    font-size: 16px;
+    color: #c1c6ce;
+  }
+}

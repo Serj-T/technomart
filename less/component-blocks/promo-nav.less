@@ -1,5 +1,6 @@
 .promo-nav {
   .wrap();
+  margin-top: 57px;
   margin-bottom: 53px;
 }
 .promo-nav__wrap {
@@ -22,6 +23,7 @@
   }
 }
 .promo-nav__item {
+  position: relative;
   width: 256px;
   height: 81px;
   padding: 21px 22px;
@@ -46,8 +48,33 @@
     background: url("../../img/icon-delivery.png") no-repeat 190px 32px,
                 #f6b22d;
   }
+  &--new {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -19px;
+      right: -32px;
+      width: 30px;
+      height: 30px;
+      border-bottom: 27px solid #ee3643;
+      border-left: 27px solid transparent;
+      border-right: 27px solid transparent;
+      transform: rotate(45deg);
+      z-index: 90;
+    }
+    &::after {
+      content: "new";
+      position: absolute;
+      top: 7px;
+      right: 8px;
+      color: #ffffff;
+      transform: rotate(45deg);
+      z-index: 90;
+    }
+  }
 }
 .promo-nav__item h3 {
+  max-height: 32px;
   margin-top: 0;
   margin-bottom: 12px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -55,6 +82,7 @@
   line-height: 30px;
   font-weight: bold;
   color: #ffffff;
+  overflow: hidden;
 }
 .promo-nav__slider {
   position: relative;
@@ -72,6 +100,36 @@
   padding-top: 110px;
   color: #ffffff;
   z-index: 90;
+}
+.promo-nav__slider label[for="perf"],
+.promo-nav__slider label[for="drill"] {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 37px;
+    width: 10px;
+    height: 10px;
+    left: 295px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 95;
+  }
+}
+.promo-nav__slider label[for="drill"] {
+  &::before {
+    left: 315px;
+  }
+}
+input[id="perf"]:checked ~ label[for="perf"],
+input[id="drill"]:checked ~ label[for="drill"] {
+  &::before {
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border: 2px solid #ffffff;
+    z-index: 95;
+  }
 }
 .promo-nav__slider .icon-left {
   margin-left: 4px;
