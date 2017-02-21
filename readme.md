@@ -1,6 +1,6 @@
 Верстка учебного макета Technomart
 ========================
-http://serj-t.github.io/technomart
+https://serj-t.github.io/technomart/build/
 
 Фиксированная верстка учебного макета Technomart с базового интенсива HTML Academy (3 страницы).
 
