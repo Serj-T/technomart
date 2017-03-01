@@ -34,7 +34,7 @@ gulp.task('style', function() {
 
 gulp.task('sync', ['style'], function() {
 	server.init({
-		server: "build", /*стартует из корня*/
+		server: ".", /*стартует из корня*/
 		notify: false, /*убираем оповещения*/
     open: true,
     ui: false
