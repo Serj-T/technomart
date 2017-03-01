@@ -1,12 +1,4 @@
-psd/
-node_modules/
-build/
-css/*.css
-.DS_Store
-.idea
-*.ai
-*.log
-*.pdf
-*.psd
-*.sublime*
-Thumbs.db
+/*
+!build/
+!readme.md
+!.gitignore
