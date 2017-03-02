@@ -1,6 +1,6 @@
 var link = document.querySelector('.btn--about-contact');
 var popupFeedback = document.querySelector('.popup-feedback');
-var close = document.querySelector('.btn--close-popup');
+var close = popupFeedback.querySelector('.btn--close-popup');
 var overlay = document.querySelector('.overlay');
 
 link.addEventListener('click', function(event){

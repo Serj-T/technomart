@@ -1,6 +1,6 @@
 var linkMap = document.querySelector('.about__contacts-map');
 var popupMap = document.querySelector('.popup-map');
-var close = document.querySelector('.btn--close-popup');
+var close = popupMap.querySelector('.btn--close-popup');
 var overlay = document.querySelector('.overlay');
 
 linkMap.addEventListener('click', function(event){
