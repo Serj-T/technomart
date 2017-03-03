@@ -4,11 +4,12 @@
   margin-bottom: 53px;
 }
 .promo-nav__wrap {
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between;
-  flex-wrap: wrap;
-  min-height: 409px;
+  width: 940px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-content: space-between;
+  // flex-wrap: wrap;
+  // min-height: 409px;
 }
 .promo-nav__group {
   display: flex;
@@ -23,6 +24,7 @@
   }
 }
 .promo-nav__item {
+  display: inline-block;
   position: relative;
   width: 256px;
   height: 81px;
@@ -86,20 +88,26 @@
 }
 .promo-nav__slider {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 620px;
+  float: left;
+
+  //display: inline-block;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-basis: 620px;
   height: 266px;
 }
 .promo-nav__slider input[type="radio"] {
   display: none;
 }
 .promo-nav__slider label {
-  font-size: 45px;
-  cursor: pointer;
+  display: none;
+  position: relative;
   padding-top: 110px;
+  border: 10px solid red;
+  font-size: 45px;
   color: #ffffff;
   z-index: 90;
+  cursor: pointer;
 }
 .promo-nav__slider label[for="perf"],
 .promo-nav__slider label[for="drill"] {
